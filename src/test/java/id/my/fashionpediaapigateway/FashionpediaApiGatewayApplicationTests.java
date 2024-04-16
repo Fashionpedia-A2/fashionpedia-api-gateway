@@ -1,4 +1,4 @@
-package org.example.fashionpediaapigateway;
+package id.my.fashionpediaapigateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

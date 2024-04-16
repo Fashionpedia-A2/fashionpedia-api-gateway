@@ -1,4 +1,4 @@
-package org.example.fashionpediaapigateway;
+package id.my.fashionpediaapigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
