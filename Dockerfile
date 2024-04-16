@@ -10,6 +10,13 @@ ENV JDBC_DATABASE_URL ${JDBC_DATABASE_URL}
 ENV JDBC_DATABASE_USERNAME ${JDBC_DATABASE_USERNAME}
 
 WORKDIR /app
-COPY ./build/libs/fashionpedia-api-gateway-0.0.1-SNAPSHOT.jar /app
+
+# Copy the JAR file from the build context into the Docker image
+COPY ./build/libs/*.jar /app/
+
+# Add a command to list the contents of the directory
+RUN ls -l /app
+
 EXPOSE 8080
+
 CMD ["java","-jar","fashionpedia-api-gateway-0.0.1-SNAPSHOT.jar"]
