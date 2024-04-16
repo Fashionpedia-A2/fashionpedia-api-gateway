@@ -56,7 +56,6 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "21"
-          cache: "gradle"
 
       - name: Set up environment
         run: |
@@ -68,7 +67,6 @@ jobs:
           gradle check --info --stacktrace
           gradle test
           gradle jacocoTestReport
-          grep -Eo "Total.*?([0-9]{1,3})%" build/jacocoHtml/index.html
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
