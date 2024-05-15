@@ -19,4 +19,5 @@ RUN ls -l /app
 
 EXPOSE 8080
 
+CMD ["docker-compose", "-f", "monitoring/docker-compose.yml", "up", "-d"]
 CMD ["java","-jar","fashionpedia-api-gateway-0.0.1-SNAPSHOT.jar"]

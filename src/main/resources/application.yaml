@@ -33,3 +33,11 @@ spring:
             - Path=
               /api/v1/top-up/**, 
               /api/v1/pembayaran/**
+  main:
+    web-application-type: reactive
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: [ "prometheus" ]
