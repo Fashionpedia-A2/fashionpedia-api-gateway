@@ -18,6 +18,8 @@ COPY ./build/libs/fashionpedia-api-gateway-0.0.1-SNAPSHOT.jar /app/
 RUN ls -l /app
 
 EXPOSE 8080
+EXPOSE 9090
+EXPOSE 3000
 
 CMD ["docker-compose", "-f", "monitoring/docker-compose.yml", "up", "-d"]
 CMD ["java","-jar","fashionpedia-api-gateway-0.0.1-SNAPSHOT.jar"]
