@@ -1,5 +1,5 @@
-#server:
-#  port: 8081
+server:
+  port: 8080
 
 spring:
   application:
@@ -14,19 +14,21 @@ spring:
           uri: http://report.fashionpedia.my.id
           predicates:
             - Path=
-              /api/v1/report/**,
+              /api/v1/report/**
         - id: account_service_route
           uri: http://account.fashionpedia.my.id
           predicates:
             - Path=
-              /api/v1/auth/**, 
+              /api/v1/auth/**
         - id: buysell_service_route
           uri: http://buysell.fashionpedia.my.id
           predicates:
             - Path=
               /api/v1/seller/**, 
               /api/v1/buyer/**, 
-              /api/v1/buysell/**
+              /api/v1/listing/**,
+              /api/v1/cart/**,
+              /api/v1/order/**
         - id: payment_service_route
           uri: http://payment.fashionpedia.my.id
           predicates:
